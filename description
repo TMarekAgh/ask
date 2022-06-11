@@ -1,0 +1,12 @@
+Infrastruktura oparta jest o providera Digitalocean
+Główny plikiem infrastruktury jest plik main.tf
+Zawiera on architekturę opartą o Digitalocean App 
+który w znacznym stopniu ułatwia deployowanie aplikacji (bezpośrednio z repozytorium) 
+
+Plikiem rozszerzonym jest plik extended.tf, jest to alternatywna infrastruktura oparta na dropletach,
+manualnie definiowana jest większość rzeczy które dla app'a dostajemy out of the box.
+
+W obu tych infrastrukturach ruch wewnętrzny dla poszczególnych modułów odbywa się na portach 33455 33456 i 33457 
+Użyta została baza mongodb
+Na aplikację składa się Aplikacja Webowa, API oraz dwa mikroserwisy (App Auth i User Auth)
+Jako że nie otrzymałem 100 dolarów ze student packa (digitalocean), nie wystawiałem architektury
